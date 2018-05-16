@@ -1,6 +1,26 @@
 <template>
 <div class="home">
   <section class="hero is-success is-fullheight">
+	  
+		<vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="120"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+				class='particles-js'
+      >
+      </vue-particles>
     <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -17,7 +37,7 @@
             </span>
             <span>Get in touch now</span></a>
         </div>
-      </div>
+    </div>
   </section>
   <section class="section">
     <div class="container">
@@ -260,10 +280,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang='sass' scoped >
 @import '../mediaquerys'
+.home
 .hero
   background: linear-gradient(to top, rgba($primary, 0.6) ,rgba(#000 , 0.8) ), url('../assets/farzad-nazifi-71686-unsplash.jpg') center no-repeat
   background-size: cover
   background-attachment: fixed
+  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 90%)
+  z-index: 1
   .title
     text-transform: uppercase
     line-heigth: 150%
@@ -294,4 +317,11 @@ export default {
 	width: 80%
 	max-width: 150px
 	heigth: 150px
+.particles-js
+	background-size: cover
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
 </style>

@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Nav />
-    <!-- <img src="./assets/logo.png"> -->
     <Home/>
-
     <footer class="footer">
       <div class="container">
         <div class="columns">
