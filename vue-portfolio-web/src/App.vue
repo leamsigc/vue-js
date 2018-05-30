@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav />
-    <Home/>
+    <router-view></router-view>
     <footer class="footer">
       <div class="container">
         <div class="columns">
@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
-import Home  from './components/Home.vue'
+import Nav from './components/Nav.vue';
+import Home from './components/Home.vue';
 
 export default {
   name: 'app',
@@ -29,7 +29,7 @@ export default {
     Nav,
     Home
   }
-}
+};
 </script>
 
 <style lang='sass'>

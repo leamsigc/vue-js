@@ -2,9 +2,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="https://leamsigc.git">
-                    Leamsigc
-                </a>
+                <router-link to='/' class="navbar-item">Leamsigc</router-link>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"  v-on:click='toggleNav'  v-bind:class="{ 'is-active': isActive }">
                     <span aria-hidden="true"></span>
@@ -14,9 +12,9 @@
             </div>
             <div class="navbar-menu" v-on:click='toggleNav' v-bind:class="{'is-active':isActive}">
                 <div class="navbar-end">
-                    <a href="/" class="navbar-item">Home</a>
+                    <router-link to='/' class="navbar-item">Home</router-link>
+                    <router-link to='/faq' class="navbar-item">Portfolio</router-link>
                     <a href="/" class="navbar-item">About</a>
-                    <a href="/" class="navbar-item">Portfolio</a>
                     <a href="/" class="navbar-item">Contact</a>
 
                     <div class="navbar-item">
@@ -38,19 +36,19 @@
 </template>
 
 <script>
-    export default {
-        name: "Nav",
-        data: function (){
-            return {
-                isActive: false
-            }
-        },
-        methods: {
-            toggleNav:function () {
-                this.isActive = !this.isActive
-            }
-        }
+export default {
+  name: 'Nav',
+  data: function() {
+    return {
+      isActive: false
     };
+  },
+  methods: {
+    toggleNav: function() {
+      this.isActive = !this.isActive;
+    }
+  }
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
